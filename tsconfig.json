@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "module": "CommonJS",
+      "outDir": "build",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "declaration": true
+    },
+    "include": ["src/**/*", "assets"],
+    "exclude": ["node_modules", "**/*.spec.ts"],
+}
