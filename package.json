@@ -7,7 +7,7 @@
     "test": "npx jest --collectCoverage",
     "build:test": "jest-test-gen ./src/%FILE% --outputDir ../test --fileSuffix .test",
     "build:package": "tsc",
-    "build:docs": "npx typedoc src/index.ts",
+    "build:docs": "npx typedoc",
     "build": "npm run build:docs && npm run build:package"
   },
   "author": "Vivien le Duc",

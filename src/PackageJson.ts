@@ -11,7 +11,8 @@ import PeerDependencyMeta from "./PeerDependencyMeta";
  */
 export default interface PackageJson {
     /**
-     * If you plan to publish your package, the most important things in your package.json are the name and version fields as they will be required.
+     * If you plan to publish your package, the most important things in your package.json
+     * are the name and version fields as they will be required.
      * The name and version together form an identifier that is assumed to be completely unique.
      * Changes to the package should come along with changes to the version.
      * If you don't plan to publish your package, the name and version fields are optional.
