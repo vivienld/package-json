@@ -28,11 +28,14 @@
     "save",
     "edit"
   ],
-  "author": "Vivien Le Duc",
+  "author": "Vivien Le Duc <vivienld.npm@gmail.com>",
   "repository": {
-    "type": "github",
-    "url": "https://github.com/vivienld/Pakaje"
+    "type": "git",
+    "url": "https://github.com/vivienld/Pakaje.git"
   },
+   "files": [
+    "build"
+  ],
   "license": "ISC",
   "dependencies": {
     "@types/jsonfile": "^6.1.1",
