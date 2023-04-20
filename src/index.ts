@@ -1,2 +1,3 @@
 import * as PackageJson from "./PackageJson";
-export default PackageJson;
+import PackageManager from "./PackageManager";
+export default { ...PackageJson, PackageManager };
