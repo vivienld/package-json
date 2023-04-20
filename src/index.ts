@@ -1,2 +1,2 @@
-import { PackageJson } from "./PackageJson";
+import * as PackageJson from "./PackageJson";
 export { PackageJson };
