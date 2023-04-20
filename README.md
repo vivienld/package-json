@@ -5,7 +5,7 @@
 
 <h3 align="center"><a href="https://vivienld.github.io/pakaje">TypeDoc</a></h3>
 
-### Create a default config object
+#### Create a default config object
 
 The `Pakaje` static class is the entry point of every instruction. 
 
@@ -17,7 +17,7 @@ const config = Pakaje.new("my-app");
 
 This will generate a default `PackageJson` object.
 
-### Update properties
+#### Update properties
 
 You can find every property of a package.json file in a `PackageJson` object.
 
@@ -30,7 +30,7 @@ config.dependencies = {
 
 And so on...
 
-### Save configuration
+#### Save configuration
 
 `save` and `saveSync` will save the configuration in the `package.json` in the current directory.
 
@@ -68,7 +68,7 @@ Pakaje.save(config,"./new-path/package.json")
     .catch(err=>/**...*/)
 ```
 
-### Load configuration
+#### Load configuration
 
 `load` and `loadSync` will load the configuration from the `package.json` in the current directory.
 
