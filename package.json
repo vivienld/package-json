@@ -1,17 +1,15 @@
 {
-  "name": "pckg",
+  "name": "test",
   "version": "1.0.0",
-  "description": "A package.json manager",
-  "main": "build/index.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "npx jest --collectCoverage",
-    "build:test": "jest-test-gen ./src/%FILE% --outputDir ../test --fileSuffix .test",
+    "build:test": "jest-test-gen ./src/%FILE% --outputDir ../test --fileSuffix .test --silent=false",
     "build:package": "tsc",
-    "build:docs": "npx typedoc",
+    "build:docs": "npx typedoc src/index.ts",
     "build": "npm run build:docs && npm run build:package"
   },
-  "author": "Vivien le Duc",
-  "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
@@ -20,5 +18,12 @@
     "ts-jest": "^29.1.0",
     "typedoc": "^0.24.1",
     "typescript": "^5.0.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jsonfile": "^6.1.1",
+    "jsonfile": "^6.1.0"
   }
 }
