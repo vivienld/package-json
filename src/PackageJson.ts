@@ -1,15 +1,8 @@
-import Bug from "./Bug";
-import Funding from "./Funding";
-import Person from "./Person";
-import Directories from "./Directories";
-import Repository from "./Repository";
-import PeerDependencyMeta from "./PeerDependencyMeta";
-
 /**
  * A package.json representation
  * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json
  */
-export default interface PackageJson {
+export interface PackageJson {
     /**
      * If you plan to publish your package, the most important things in your package.json
      * are the name and version fields as they will be required.
@@ -150,7 +143,7 @@ export default interface PackageJson {
      * A shortcut to visit each funding url is also available when providing the project name such as: npm fund <projectname>
      * (when there are multiple URLs, the first one will be visited)
      */
-    funding: string | Funding | Funding[];
+    funding?: string | Funding | Funding[];
     /**
      * The optional files field is an array of file patterns that describes the entries to be included
      * when your package is installed as a dependency.
@@ -229,7 +222,7 @@ export default interface PackageJson {
      *
      * See folders for more info on executables.
      */
-    bin?: Map<string, string>;
+    bin?: Record<string, string>;
     /**
      * Specify either a single file or an array of filenames to put in place for the man program to find.
      *
@@ -271,12 +264,12 @@ export default interface PackageJson {
      * Script commands that are run at various times in the lifecycle of your package.
      * The key is the lifecycle event, and the value is the command to run at that point.
      */
-    scripts?: Map<string, string>;
+    scripts?: Record<string, string>;
     /**
      * A "config" object can be used to set configuration parameters used in package scripts that persist across upgrades.
      * It could have a `start` command that referenced the `npm_package_config_port` environment variable.
      */
-    config?: Map<string, string>;
+    config?: Record<string, string>;
 
     /**
      * Dependencies are specified in a simple object that maps a package name to a version range. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or git URL.
@@ -321,7 +314,7 @@ export default interface PackageJson {
      *   }
      * }
      */
-    dependencies?: Map<string, string>;
+    dependencies?: Record<string, string>;
     /**
      * If someone is planning on downloading and using your module in their program,
      * then they probably don't want or need to download and build the external test or documentation framework that you use.
@@ -334,7 +327,7 @@ export default interface PackageJson {
      * For build steps that are not platform-specific, such as compiling CoffeeScript or other languages to JavaScript,
      * use the prepare script to do this, and make the required package a devDependency.
      */
-    devDependencies?: Map<string, string>;
+    devDependencies?: Record<string, string>;
     /**
      * In some cases, you want to express the compatibility of your package with a host tool or library,
      * while not necessarily doing a require of this host. This is usually referred to as a plugin.
@@ -351,7 +344,7 @@ export default interface PackageJson {
      * Thus, if you've worked with every 1.x version of the host package, use "^1.0" or "1.x" to express this.
      * If you depend on features introduced in 1.5.2, use "^1.5.2".
      */
-    peerDependencies?: Map<string, string>;
+    peerDependencies?: Record<string, string>;
     /**
      * When a user installs your package, npm will emit warnings if packages specified in peerDependencies are not already installed.
      * The peerDependenciesMeta field serves to provide npm more information on how your peer dependencies are to be used.
@@ -387,7 +380,7 @@ export default interface PackageJson {
      *
      * Entries in optionalDependencies will override entries of the same name in dependencies, so it's usually best to only put in one place.
      */
-    optionalDependencies?: Map<string, string>;
+    optionalDependencies?: Record<string, string>;
     /**
      * If you need to make specific changes to dependencies of your dependencies,
      * for example replacing the version of a dependency with a known security issue,
@@ -397,7 +390,7 @@ export default interface PackageJson {
      * Overrides provide a way to replace a package in your dependency tree with another version, or another package entirely.
      * These changes can be scoped as specific or as vague as desired.
      */
-    overrides?: Map<string, string>;
+    overrides?: Record<string, string>;
     /** You can specify the version of node that your stuff works on.
      * And, like with dependencies, if you don't specify the version (or if you specify "*" as the version), then any version of node will do.
      * You can also use the "engines" field to specify which versions of npm are capable of properly installing your program.
@@ -419,7 +412,7 @@ export default interface PackageJson {
      *   }
      * }
      */
-    engines?: Map<string, string>;
+    engines?: Record<string, string>;
     /**
      * You can specify which operating systems your module will run on.
      * You can also block instead of allowing operating systems, just prepend the blocked os with a '!'
@@ -503,4 +496,97 @@ export default interface PackageJson {
      * }
      */
     workspaces?: string[];
+}
+
+/**
+ * The url to your project's issue tracker and / or the email address to which issues should be reported. These are helpful for people who encounter issues with your package.
+ * You can specify either one or both values. If you want to provide only a url, you can specify the value for "bugs" as a simple string instead of an object.
+ * If a url is provided, it will be used by the npm bugs command.
+ */
+export interface Bug {
+    /**
+     * The url to send bugs to.
+     * @example "https://github.com/owner/project/issues"
+     */
+    url?: string;
+    /**
+     * The email to send bugs to.
+     * @example "project@hostname.com"
+     */
+    email?: string;
+}
+
+/**
+ * The CommonJS Packages spec details a few ways that you can indicate the structure of your package using a directories object.
+ * If you look at npm's package.json, you'll see that it has directories for doc, lib, and man.
+ */
+export interface Directories {
+    /** If you specify a 'bin' directory, then all the files in that folder will be used as the 'bin' hash. */
+    bin?: string;
+    /** Put markdown files in here. Eventually, these will be displayed nicely, maybe, someday. */
+    doc?: string;
+    /** Put markdown files in here. Eventually, these will be displayed nicely, maybe, someday. */
+    example?: string;
+    /** Tell people where the bulk of your library is. Nothing special is done with the lib folder in any way, but it's useful meta info. */
+    lib?: string;
+    /** A folder that is full of man pages. Sugar to generate a 'man' array by walking the folder. */
+    man?: string;
+    /** ? */
+    test?: string;
+}
+
+/**
+ * Up-to-date information about ways to help fund development of your package.
+ */
+export interface Funding {
+    /**
+     * Funding type.
+     * @example individual
+     * @example patreon
+     */
+    type: string;
+    /**
+     * Funding url.
+     * @example http://example.com/donate
+     * @example https://www.patreon.com/my-account
+     */
+    url: string;
+}
+
+/**
+ * When a user installs your package, npm will emit warnings if packages specified in peerDependencies are not already installed.
+ * The peerDependenciesMeta field serves to provide npm more information on how your peer dependencies are to be used.
+ * Specifically, it allows peer dependencies to be marked as optional.
+ */
+export interface PeerDependencyMeta {
+    /**
+     * Marking a peer dependency as optional ensures npm will not emit a warning if the soy-milk package is not installed on the host.
+     * This allows you to integrate and interact with a variety of host packages without requiring all of them to be installed.
+     */
+    optional: boolean;
+}
+
+/**
+ * Author and Contributors type.
+ */
+export interface Person {
+    /** The person's name. */
+    name: string;
+    /** The person's email. */
+    email?: string;
+    /** The person's url. */
+    url?: string;
+}
+
+/**
+ * Specify the place where your code lives. This is helpful for people who want to contribute.
+ * If the git repo is on GitHub, then the npm docs command will be able to find you.
+ */
+export interface Repository {
+    /** Repo type. */
+    type: string;
+    /** Repo url. */
+    url: string;
+    /** Repo directory. */
+    directory?: string;
 }

@@ -1,9 +1,3 @@
-import Bug from "./Bug";
-import Directories from "./Directories";
-import Funding from "./Funding";
-import PackageJson from "./PackageJson";
-import PeerDependencyMeta from "./PeerDependencyMeta";
-import Person from "./Person";
-import Repository from "./Repository";
-
+import { Bug, Directories, Funding, PackageJson, PeerDependencyMeta, Person, Repository } from "./PackageJson";
+import { DefaultPackageJson } from "./templates";
 export { Bug, Directories, Funding, PackageJson, PeerDependencyMeta, Person, Repository };
