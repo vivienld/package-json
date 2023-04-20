@@ -2,7 +2,7 @@
   "name": "pckg-manager",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "npx jest --collectCoverage",
     "build:test": "jest-test-gen ./src/%FILE% --outputDir ../test --fileSuffix .test --silent=false",
