@@ -10,7 +10,7 @@
 The `Pakaje` static class is the entry point of every instruction. 
 
 ```typescript
-import {Pakaje} from "Pakaje";
+import {Pakaje} from "pakaje";
 
 const config = Pakaje.new("my-app");
 ```
