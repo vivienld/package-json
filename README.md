@@ -75,15 +75,15 @@ Pakaje.save(config,"./new-path/package.json")
 ```typescript
 //sync
 
-Pakaje.saveSync(config);
+Pakaje.loadSync();
 
 // async
 
-const loaded = await Pakaje.load(config);
+const loaded = await Pakaje.load();
 
 // or...
 
-Pakaje.load(config)
+Pakaje.load()
     .then(data=>/**...*/)
     .catch(err=>/**...*/)
 ```
@@ -93,15 +93,15 @@ Adding a path as second parameter will load the configuration from another locat
 ```typescript
 //sync
 
-Pakaje.saveSync(config,"./new-path/package.json");
+Pakaje.loadSync("./custom-path/package.json");
 
 // async
 
-const loaded = await Pakaje.load(config,"./new-path/package.json");
+const loaded = await Pakaje.load("./custom-path/package.json");
 
 // or...
 
-Pakaje.load(config,"./new-path/package.json")
+Pakaje.load("./custom-path/package.json")
     .then(data=>/**...*/)
     .catch(err=>/**...*/)
 ```
