@@ -1,6 +1,6 @@
 {
   "name": "pakaje",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Load, edit and save a package.json configuration file.",
   "main": "build/index.js",
   "scripts": {
