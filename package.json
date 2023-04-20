@@ -1,7 +1,7 @@
 {
-  "name": "pckg-manager",
+  "name": "Pakaje",
   "version": "1.0.0",
-  "description": "",
+  "description": "Load, edit and save a package.json configuration file.",
   "main": "build/index.js",
   "scripts": {
     "test": "npx jest --collectCoverage",
@@ -19,8 +19,12 @@
     "typedoc": "^0.24.1",
     "typescript": "^5.0.4"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["package", "package.json","package manager","manager","load","save","edit"],
+  "author": "Vivien Le Duc",
+  "repository":{
+    "type": "github",
+    "url": "https://github.com/vivienld/Pakaje"
+  },
   "license": "ISC",
   "dependencies": {
     "@types/jsonfile": "^6.1.1",

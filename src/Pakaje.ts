@@ -9,7 +9,7 @@ const defaultPackagePath: string = "./package.json";
 /**
  * Service to save or load package.json config file
  */
-export default class PackageManager {
+export class Pakaje {
     /**
      * @param appName The app name of the project.
      * @returns A default package.json template.
@@ -31,31 +31,35 @@ export default class PackageManager {
 
     /**
      * Writes the given model in a "package.json" file
-     * @param packageJson The PackageJson model.
-     * @param callback The operation callback.
+     * @param config The PackageJson model.
      * @param path The saving path
      */
-    static save = (packageJson: PackageJson, callback: WriteCallback, path: string = defaultPackagePath) =>
-        writeFile(path, packageJson, writeOptions, callback);
+    static save = async (config: PackageJson, path: string = defaultPackagePath) => writeFile(path, config, writeOptions);
 
     /**
      * Writes the given model in a "package.json" file
-     * @param packageJson The PackageJson model.
+     * @param config The PackageJson model.
      * @param path The saving path
      */
-    static saveSync = (packageJson: PackageJson, path: string = defaultPackagePath) => writeFileSync(path, packageJson, writeOptions);
-
-    /**
-     * Loads a package.json config. If no path given, loads the current project(*'s config)
-     * @param callback The operation callback.
-     * @param path The saving path
-     */
-    static load = (callback: CallbackType, path: string = defaultPackagePath) => readFile(path, readOptions, (err, data) => callback(err, data));
+    static saveSync = (config: PackageJson, path: string = defaultPackagePath) => writeFileSync(path, config, writeOptions);
 
     /**
      * Loads a package.json config. If no path given, loads the current project(*'s config)
      * @param path The saving path
-     * @returns The config
+     * @returns A promise containing the loaded config
      */
-    static loadSync = (path: string = defaultPackagePath): PackageJson => readFileSync(path, readOptions);
+    static load = async (path: string = defaultPackagePath) => {
+        const promise = readFile(path, readOptions);
+        return new Promise<PackageJson>((resolve, reject) => {
+            promise.then((data) => resolve(data as PackageJson));
+            promise.catch(reject);
+        });
+    };
+
+    /**
+     * Loads a package.json config. If no path given, loads the current project(*'s config)
+     * @param path The saving path
+     * @returns The loaded config
+     */
+    static loadSync = (path: string = defaultPackagePath) => readFileSync(path, readOptions) as PackageJson;
 }
