@@ -350,7 +350,7 @@ interface PackageJson {
      * The peerDependenciesMeta field serves to provide npm more information on how your peer dependencies are to be used.
      * Specifically, it allows peer dependencies to be marked as optional.
      */
-    peerDependenciesMeta?: Map<string, PeerDependencyMeta>;
+    peerDependenciesMeta?: Record<string, PeerDependencyMeta>;
     /**
      * This defines an array of package names that will be bundled when publishing the package.
      * In cases where you need to preserve npm packages locally or have them available through a single file download,
