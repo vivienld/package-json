@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "module": "System",
+      "module": "CommonJS",
       "outDir": "build",
       "noImplicitAny": true,
       "removeComments": true,
