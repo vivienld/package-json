@@ -250,13 +250,13 @@ interface PackageJson {
      * If the git repo is on GitHub, then the npm docs command will be able to find you.
      *
      * @example
-     * {
-     *  "repository": {
-     *    "type": "git",
-     *    "url": "https://github.com/facebook/react.git",
-     *    "directory": "packages/react-dom"
-     *  }
-     *}
+      {
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/facebook/react.git",
+          "directory": "packages/react-dom"
+        }
+      }
      */
     repository?: Repository | string;
 
@@ -297,22 +297,22 @@ interface PackageJson {
      * - `path/path/path` See Local Paths below
      *
      * @example
-     * {
-     *   "dependencies": {
-     *     "foo": "1.0.0 - 2.9999.9999",
-     *     "bar": ">=1.0.2 <2.1.2",
-     *     "baz": ">1.0.2 <=2.3.4",
-     *     "boo": "2.0.1",
-     *     "qux": "<1.0.0 || >=2.3.1 <2.4.5 || >=2.5.2 <3.0.0",
-     *     "asd": "http://asdf.com/asdf.tar.gz",
-     *     "til": "~1.2",
-     *     "elf": "~1.2.3",
-     *     "two": "2.x",
-     *     "thr": "3.3.x",
-     *     "lat": "latest",
-     *     "dyl": "file:../dyl"
-     *   }
-     * }
+       {
+         "dependencies": {
+           "foo": "1.0.0 - 2.9999.9999",
+           "bar": ">=1.0.2 <2.1.2",
+           "baz": ">1.0.2 <=2.3.4",
+           "boo": "2.0.1",
+           "qux": "<1.0.0 || >=2.3.1 <2.4.5 || >=2.5.2 <3.0.0",
+           "asd": "http://asdf.com/asdf.tar.gz",
+           "til": "~1.2",
+           "elf": "~1.2.3",
+           "two": "2.x",
+           "thr": "3.3.x",
+           "lat": "latest",
+           "dyl": "file:../dyl"
+         }
+       }
      */
     dependencies?: Record<string, string>;
     /**
@@ -399,18 +399,18 @@ interface PackageJson {
      * when your package is installed as a dependency.
      *
      * @example
-     * {
-     *   "engines": {
-     *     "node": ">=0.10.3 <15"
-     *   }
-     * }
+       {
+         "engines": {
+           "node": ">=0.10.3 <15"
+         }
+       }
      *
      * @example
-     * {
-     *   "engines": {
-     *     "npm": "~1.0.20"
-     *   }
-     * }
+       {
+         "engines": {
+           "npm": "~1.0.20"
+         }
+       }
      */
     engines?: Record<string, string>;
     /**
@@ -421,18 +421,18 @@ interface PackageJson {
      * It is allowed to both block and allow an item, although there isn't any good reason to do this.
      *
      * @example
-     * {
-     *   "os": [
-     *     "darwin",
-     *     "linux"
-     *   ]
-     * }
+       {
+         "os": [
+           "darwin",
+           "linux"
+         ]
+       }
      * @example
-     * {
-     *   "os": [
-     *     "!win32",
-     *   ]
-     * }
+       {
+         "os": [
+           "!win32",
+         ]
+       }
      */
     os?: string[];
     /**
@@ -441,20 +441,20 @@ interface PackageJson {
      * The host architecture is determined by process.arch
      *
      * @example
-     * {
-     *   "cpu": [
-     *     "x64",
-     *     "ia32"
-     *   ]
-     * }
+       {
+         "cpu": [
+           "x64",
+           "ia32"
+         ]
+       }
      *
      * @example
-     * {
-     *  "cpu": [
-     *    "!arm",
-     *    "!mips"
-     *  ]
-     *}
+      {
+       "cpu": [
+         "!arm",
+         "!mips"
+       ]
+       }
      */
     cpu?: string[];
     /**
@@ -488,12 +488,12 @@ interface PackageJson {
      *
      * @example
      *
-     * {
-     *   "name": "workspace-example",
-     *   "workspaces": [
-     *     "./packages/*"
-     *   ]
-     * }
+     {
+       "name": "workspace-example",
+       "workspaces": [
+         "./packages/*"
+       ]
+     }
      */
     workspaces?: string[];
 }
