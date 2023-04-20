@@ -1,3 +1,3 @@
-import * as PackageJson from "./PackageJson";
+import { PackageJson, Bug, Directories, Funding, PeerDependencyMeta, Person, Repository } from "./PackageJson";
 import PackageManager from "./PackageManager";
-export default { ...PackageJson, PackageManager };
+export { PackageJson, Bug, Directories, Funding, PeerDependencyMeta, Person, Repository, PackageManager };
