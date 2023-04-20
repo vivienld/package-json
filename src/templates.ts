@@ -2,7 +2,7 @@ import { PackageJson } from "./PackageJson";
 
 /** The base package.json template. */
 const DefaultPackageJson: PackageJson = {
-    name: "app",
+    name: "",
     version: "1.0.0",
     description: "",
     main: "index.js",

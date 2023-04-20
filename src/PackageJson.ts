@@ -2,7 +2,7 @@
  * A package.json representation
  * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json
  */
-export interface PackageJson {
+interface PackageJson {
     /**
      * If you plan to publish your package, the most important things in your package.json
      * are the name and version fields as they will be required.
@@ -503,7 +503,7 @@ export interface PackageJson {
  * You can specify either one or both values. If you want to provide only a url, you can specify the value for "bugs" as a simple string instead of an object.
  * If a url is provided, it will be used by the npm bugs command.
  */
-export interface Bug {
+interface Bug {
     /**
      * The url to send bugs to.
      * @example "https://github.com/owner/project/issues"
@@ -520,7 +520,7 @@ export interface Bug {
  * The CommonJS Packages spec details a few ways that you can indicate the structure of your package using a directories object.
  * If you look at npm's package.json, you'll see that it has directories for doc, lib, and man.
  */
-export interface Directories {
+interface Directories {
     /** If you specify a 'bin' directory, then all the files in that folder will be used as the 'bin' hash. */
     bin?: string;
     /** Put markdown files in here. Eventually, these will be displayed nicely, maybe, someday. */
@@ -538,7 +538,7 @@ export interface Directories {
 /**
  * Up-to-date information about ways to help fund development of your package.
  */
-export interface Funding {
+interface Funding {
     /**
      * Funding type.
      * @example individual
@@ -558,7 +558,7 @@ export interface Funding {
  * The peerDependenciesMeta field serves to provide npm more information on how your peer dependencies are to be used.
  * Specifically, it allows peer dependencies to be marked as optional.
  */
-export interface PeerDependencyMeta {
+interface PeerDependencyMeta {
     /**
      * Marking a peer dependency as optional ensures npm will not emit a warning if the soy-milk package is not installed on the host.
      * This allows you to integrate and interact with a variety of host packages without requiring all of them to be installed.
@@ -569,7 +569,7 @@ export interface PeerDependencyMeta {
 /**
  * Author and Contributors type.
  */
-export interface Person {
+interface Person {
     /** The person's name. */
     name: string;
     /** The person's email. */
@@ -582,7 +582,7 @@ export interface Person {
  * Specify the place where your code lives. This is helpful for people who want to contribute.
  * If the git repo is on GitHub, then the npm docs command will be able to find you.
  */
-export interface Repository {
+interface Repository {
     /** Repo type. */
     type: string;
     /** Repo url. */
@@ -590,3 +590,5 @@ export interface Repository {
     /** Repo directory. */
     directory?: string;
 }
+
+export { PackageJson, Bug, Directories, Funding, PeerDependencyMeta, Person, Repository };
