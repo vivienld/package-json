@@ -36,7 +36,7 @@
    "files": [
     "build"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/jsonfile": "^6.1.1",
     "jsonfile": "^6.1.0"
