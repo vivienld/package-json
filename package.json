@@ -19,23 +19,13 @@
     "typedoc": "^0.24.1",
     "typescript": "^5.0.4"
   },
-  "keywords": [
-    "package",
-    "package.json",
-    "package manager",
-    "manager",
-    "load",
-    "save",
-    "edit"
-  ],
+  "keywords": ["package","package.json","package manager","manager","load","save","edit"],
   "author": "Vivien Le Duc <vivienld.npm@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/vivienld/Pakaje.git"
   },
-   "files": [
-    "build"
-  ],
+   "files": ["build"],
   "license": "MIT",
   "dependencies": {
     "@types/jsonfile": "^6.1.1",
