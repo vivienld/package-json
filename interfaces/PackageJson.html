@@ -16,7 +16,7 @@
 <li><a href="PackageJson.html">PackageJson</a></li></ul>
 <h1>Interface PackageJson</h1></div>
 <section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p>A package.json representation</p>
+<div class="tsd-comment tsd-typography"><p>A package.json representation.</p>
 
 <h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json">https://docs.npmjs.com/cli/v9/configuring-npm/package-json</a></p>
 </div></section>
@@ -25,7 +25,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">PackageJson</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L5">PackageJson.ts:5</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L5">PackageJson.ts:5</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -71,354 +71,217 @@
 <section class="tsd-panel tsd-member"><a id="author" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>author</span><a href="#author" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">author</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="Person.html" class="tsd-signature-type tsd-kind-interface">Person</a></div>
-<div class="tsd-comment tsd-typography"><p>The author of the project</p>
+<div class="tsd-comment tsd-typography"><p>The author of the project.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#people-fields-author-contributors">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#people-fields-author-contributors</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L135">PackageJson.ts:135</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L45">PackageJson.ts:45</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="bin" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>bin</span><a href="#bin" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">bin</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>A lot of packages have one or more executable files that they&#39;d like to install into the PATH. npm makes this pretty easy
 (in fact, it uses this feature to install the &quot;npm&quot; executable.)</p>
-<p>To use this, supply a bin field in your package.json which is a map of command name to local file name.
-When this package is installed globally, that file will be either linked inside the global bins directory or a cmd (Windows Command File)
-will be created which executes the specified file in the bin field, so it is available to run by name or name.cmd (on Windows PowerShell).</p>
-<p>When this package is installed as a dependency in another package,
-the file will be linked where it will be available to that package either directly by npm exec
-or by name in other scripts when invoking them via npm run-script.</p>
-<p>Please make sure that your file(s) referenced in bin starts with #!/usr/bin/env node, otherwise the scripts are started without the node executable!</p>
-<p>Note that you can also set the executable files using <code>directories.bin</code>.</p>
-<p>See folders for more info on executables.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#bin">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#bin</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L225">PackageJson.ts:225</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L78">PackageJson.ts:78</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="browser" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>browser</span><a href="#browser" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">browser</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>If your module is meant to be used client-side the browser field should be used instead of the main field.
-This is helpful to hint users that it might rely on primitives that aren&#39;t available in Node.js modules. (e.g. window)</p>
+<div class="tsd-comment tsd-typography"><p>If your module is meant to be used client-side the browser field should be used instead of the main field.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#browser">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#browser</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L206">PackageJson.ts:206</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L71">PackageJson.ts:71</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="bugs" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>bugs</span><a href="#bugs" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">bugs</span><span class="tsd-signature-symbol">?:</span> <a href="Bug.html" class="tsd-signature-type tsd-kind-interface">Bug</a></div>
-<div class="tsd-comment tsd-typography"><p>The url to your project&#39;s issue tracker and / or the email address to which issues should be reported. These are helpful for people who encounter issues with your package.
-You can specify either one or both values. If you want to provide only a url, you can specify the value for &quot;bugs&quot; as a simple string instead of an object.
-If a url is provided, it will be used by the npm bugs command.</p>
+<div class="tsd-comment tsd-typography"><p>The url to your project&#39;s issue tracker and / or the email address to which issues should be reported.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#bugs">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#bugs</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L58">PackageJson.ts:58</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L35">PackageJson.ts:35</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="bundleDependencies" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>bundle<wbr/>Dependencies</span><a href="#bundleDependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">bundle<wbr/>Dependencies</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
-<div class="tsd-comment tsd-typography"><p>This defines an array of package names that will be bundled when publishing the package.
-In cases where you need to preserve npm packages locally or have them available through a single file download,
-you can bundle the packages in a tarball file by specifying the package names in the bundleDependencies array and executing npm pack.</p>
-<p>We can obtain awesome-web-framework-1.0.0.tgz file by running npm pack.
-This file contains the dependencies renderized and super-streams which can be installed in a new project
-by executing npm install awesome-web-framework-1.0.0.tgz.
-Note that the package names do not include any versions, as that information is specified in dependencies.</p>
-<p>If this is spelled &quot;bundledDependencies&quot;, then that is also honored.</p>
-<p>Alternatively, &quot;bundleDependencies&quot; can be defined as a boolean value.
-A value of true will bundle all dependencies, a value of false will bundle none.</p>
+<div class="tsd-comment tsd-typography"><p>This defines an array of package names that will be bundled when publishing the package.</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">[</span><span class="hl-3">&quot;renderized&quot;</span><span class="hl-1">,</span><span class="hl-3">&quot;super-streams&quot;</span><span class="hl-1">]</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#bundledependencies">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#bundledependencies</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L371">PackageJson.ts:371</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L135">PackageJson.ts:135</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="config" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>config</span><a href="#config" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">config</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>A &quot;config&quot; object can be used to set configuration parameters used in package scripts that persist across upgrades.
 It could have a <code>start</code> command that referenced the <code>npm_package_config_port</code> environment variable.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#config">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#config</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L272">PackageJson.ts:272</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L107">PackageJson.ts:107</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="contributors" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>contributors</span><a href="#contributors" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">contributors</span><span class="tsd-signature-symbol">?:</span> <a href="Person.html" class="tsd-signature-type tsd-kind-interface">Person</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>The contributors of the project.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#people-fields-author-contributors">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#people-fields-author-contributors</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L139">PackageJson.ts:139</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L50">PackageJson.ts:50</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="cpu" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>cpu</span><a href="#cpu" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">cpu</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
-<div class="tsd-comment tsd-typography"><p>If your code only runs on certain cpu architectures, you can specify which ones.
-Like the os option, you can also block architectures.
-The host architecture is determined by process.arch</p>
+<div class="tsd-comment tsd-typography"><p>If your code only runs on certain cpu architectures, you can specify which ones.</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;cpu&quot;</span><span class="hl-1">: [</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;x64&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;ia32&quot;</span><br/><span class="hl-1">         ]</span><br/><span class="hl-1">       }</span>
-</code></pre>
-
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">       </span><span class="hl-3">&quot;cpu&quot;</span><span class="hl-1">: [</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;!arm&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;!mips&quot;</span><br/><span class="hl-1">       ]</span><br/><span class="hl-1">       }</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L459">PackageJson.ts:459</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L165">PackageJson.ts:165</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="dependencies" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>dependencies</span><a href="#dependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">dependencies</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>Dependencies are specified in a simple object that maps a package name to a version range. The version range is a string which has one or more space-separated descriptors. Dependencies can also be identified with a tarball or git URL.</p>
-<p>Please do not put test harnesses or transpilers or other &quot;development&quot; time tools in your dependencies object. See devDependencies, below.</p>
-<p>See semver for more details about specifying version ranges.</p>
-<ul>
-<li><code>version</code> Must match version exactly</li>
-<li><code>&gt;version</code> Must be greater than version</li>
-<li><code>&gt;=</code>version etc</li>
-<li><code>&lt;version</code></li>
-<li><code>&lt;=</code>version</li>
-<li><code>~version</code> &quot;Approximately equivalent to version&quot; See semver</li>
-<li><code>^version</code> &quot;Compatible with version&quot; See semver</li>
-<li><code>1.2.x</code> 1.2.0, 1.2.1, etc., but not 1.3.0</li>
-<li><code>http://...</code> See &#39;URLs as Dependencies&#39; below</li>
-<li><code>\*</code> Matches any version</li>
-<li><code>&quot;&quot;</code> (just an empty string) Same as *</li>
-<li><code>version1 - version2</code> Same as &gt;=version1 &lt;=version2.</li>
-<li><code>range1 || range2</code> Passes if either range1 or range2 are satisfied.</li>
-<li><code>git...</code> See &#39;Git URLs as Dependencies&#39; below</li>
-<li><code>user/repo</code> See &#39;GitHub URLs&#39; below</li>
-<li><code>tag</code> A specific version tagged and published as tag See npm dist-tag</li>
-<li><code>path/path/path</code> See Local Paths below</li>
-</ul>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;dependencies&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;foo&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;1.0.0 - 2.9999.9999&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;bar&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;&gt;=1.0.2 &lt;2.1.2&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;baz&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;&gt;1.0.2 &lt;=2.3.4&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;boo&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;2.0.1&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;qux&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;&lt;1.0.0 || &gt;=2.3.1 &lt;2.4.5 || &gt;=2.5.2 &lt;3.0.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;asd&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;http://asdf.com/asdf.tar.gz&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;til&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;~1.2&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;elf&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;~1.2.3&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;two&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;2.x&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;thr&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;3.3.x&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;lat&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;latest&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;dyl&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;file:../dyl&quot;</span><br/><span class="hl-1">         }</span><br/><span class="hl-1">       }</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#dependencies">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#dependencies</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L317">PackageJson.ts:317</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L113">PackageJson.ts:113</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="description" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>description</span><a href="#description" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">description</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>Put a description in it. It&#39;s a string. This helps people discover your package, as it&#39;s listed in <code>npm search</code>.</p>
+<div class="tsd-comment tsd-typography"><p>Put a description in it. This helps people discover your package, as it&#39;s listed in <code>npm search</code>.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#description-1">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#description-1</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L43">PackageJson.ts:43</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L20">PackageJson.ts:20</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="devDependencies" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>dev<wbr/>Dependencies</span><a href="#devDependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">dev<wbr/>Dependencies</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>If someone is planning on downloading and using your module in their program,
 then they probably don&#39;t want or need to download and build the external test or documentation framework that you use.</p>
-<p>In this case, it&#39;s best to map these additional items in a devDependencies object.</p>
-<p>These things will be installed when doing npm link or npm install from the root of a package,
-and can be managed like any other npm configuration param. See config for more on the topic.</p>
-<p>For build steps that are not platform-specific, such as compiling CoffeeScript or other languages to JavaScript,
-use the prepare script to do this, and make the required package a devDependency.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#devdependencies">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#devdependencies</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L330">PackageJson.ts:330</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L119">PackageJson.ts:119</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="directories" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>directories</span><a href="#directories" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">directories</span><span class="tsd-signature-symbol">?:</span> <a href="Directories.html" class="tsd-signature-type tsd-kind-interface">Directories</a></div>
-<div class="tsd-comment tsd-typography"><p>The CommonJS Packages spec details a few ways that you can indicate the structure of your package using a directories object.
-If you look at npm&#39;s package.json, you&#39;ll see that it has directories for doc, lib, and man.
-The CommonJS Packages spec details a few ways that you can indicate the structure of your package using a directories object.
-If you look at npm&#39;s package.json, you&#39;ll see that it has directories for doc, lib, and man.</p>
-<p>In the future, this information may be used in other creative ways.</p>
+<div class="tsd-comment tsd-typography"><p>The CommonJS Packages spec details a few ways that you can indicate the structure of your package using a directories object.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#directories">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#directories</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L247">PackageJson.ts:247</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L88">PackageJson.ts:88</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="engines" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>engines</span><a href="#engines" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">engines</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>You can specify the version of node that your stuff works on.
 And, like with dependencies, if you don&#39;t specify the version (or if you specify &quot;*&quot; as the version), then any version of node will do.
 You can also use the &quot;engines&quot; field to specify which versions of npm are capable of properly installing your program.</p>
-<p>Unless the user has set the engine-strict config flag, this field is advisory only and will only produce warnings
-when your package is installed as a dependency.</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;engines&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;node&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;&gt;=0.10.3 &lt;15&quot;</span><br/><span class="hl-1">         }</span><br/><span class="hl-1">       }</span>
-</code></pre>
-
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;engines&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;npm&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;~1.0.20&quot;</span><br/><span class="hl-1">         }</span><br/><span class="hl-1">       }</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L415">PackageJson.ts:415</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L155">PackageJson.ts:155</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="files" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>files</span><a href="#files" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">files</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>The optional files field is an array of file patterns that describes the entries to be included
-when your package is installed as a dependency.
-File patterns follow a similar syntax to .gitignore, but reversed: including a file, directory,
-or glob pattern (*, **, and such) will make it so that file is included in the tarball when it&#39;s packed.
-Omitting the field will make it default to [&quot;*&quot;], which means it will include all files.</p>
-<p>Some special files and directories are also included or excluded regardless of whether they exist in the files array (see below).</p>
-<p>You can also provide a .npmignore file in the root of your package or in subdirectories, which will keep files from being included.
-At the root of your package it will not override the &quot;files&quot; field, but in subdirectories it will.
-The .npmignore file works just like a .gitignore. If there is a .gitignore file, and .npmignore is missing,
-.gitignore&#39;s contents will be used instead.</p>
-<p>Files included with the &quot;package.json#files&quot; field cannot be excluded through .npmignore or .gitignore.</p>
-<p>Certain files are always included, regardless of settings:</p>
-<ul>
-<li>package.json</li>
-<li>README</li>
-<li>LICENSE / LICENCE</li>
-<li>The file in the &quot;main&quot; field</li>
-<li>README &amp; LICENSE can have any case and extension.</li>
-</ul>
-<p>Conversely, some files are always ignored:</p>
-<ul>
-<li>.git</li>
-<li>CVS</li>
-<li>.svn</li>
-<li>.hg</li>
-<li>.lock-wscript</li>
-<li>.wafpickle-N</li>
-<li>.*.swp</li>
-<li>.DS_Store</li>
-<li>._*</li>
-<li>npm-debug.log</li>
-<li>.npmrc</li>
-<li>node_modules</li>
-<li>config.gypi</li>
-<li>*.orig</li>
-<li>package-lock.json (use npm-shrinkwrap.json if you wish it to be published)</li>
-</ul>
+when your package is installed as a dependency.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#files">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#files</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L189">PackageJson.ts:189</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L61">PackageJson.ts:61</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="funding" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>funding</span><a href="#funding" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">funding</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="Funding.html" class="tsd-signature-type tsd-kind-interface">Funding</a><span class="tsd-signature-symbol"> | </span><a href="Funding.html" class="tsd-signature-type tsd-kind-interface">Funding</a><span class="tsd-signature-symbol">[]</span></div>
-<div class="tsd-comment tsd-typography"><p>Up-to-date information about ways to help fund development of your package.
-Users can use the npm fund subcommand to list the funding URLs of all dependencies of their project, direct and indirect.
-A shortcut to visit each funding url is also available when providing the project name such as: npm fund <projectname>
-(when there are multiple URLs, the first one will be visited)</p>
+<div class="tsd-comment tsd-typography"><p>Up-to-date information about ways to help fund development of your package.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#funding">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#funding</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L146">PackageJson.ts:146</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L55">PackageJson.ts:55</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="homepage" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>homepage</span><a href="#homepage" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">homepage</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div>
 <div class="tsd-comment tsd-typography"><p>The url to the project homepage.</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-3">&quot;https://github.com/owner/project#readme&quot;</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#homepage">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#homepage</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L52">PackageJson.ts:52</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L30">PackageJson.ts:30</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="keywords" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>keywords</span><a href="#keywords" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">keywords</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
-<div class="tsd-comment tsd-typography"><p>Put keywords in it. It&#39;s an array of strings. This helps people discover your package as it&#39;s listed in <code>npm search</code>.</p>
+<div class="tsd-comment tsd-typography"><p>Put keywords in it. This helps people discover your package as it&#39;s listed in <code>npm search</code>.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#keywords">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#keywords</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L47">PackageJson.ts:47</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L25">PackageJson.ts:25</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="license" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>license</span><a href="#license" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">license</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 <div class="tsd-comment tsd-typography"><p>You should specify a license for your package so that people know how they are permitted to use it, and any restrictions you&#39;re placing on it.</p>
-<p>If you&#39;re using a common license such as BSD-2-Clause or MIT, add a current SPDX license identifier for the license you&#39;re using, like this:</p>
-<pre><code><span class="hl-1">{</span><br/><span class="hl-1">   </span><span class="hl-3">&quot;license&quot;</span><span class="hl-1"> : </span><span class="hl-3">&quot;BSD-3-Clause&quot;</span><br/><span class="hl-1">}</span>
-</code></pre>
-<p>You can check the full list of SPDX license IDs. Ideally you should pick one that is OSI approved.
-If your package is licensed under multiple common licenses, use an SPDX license expression syntax version 2.0 string, like this:</p>
-<pre><code><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-3">&quot;license&quot;</span><span class="hl-1"> : </span><span class="hl-3">&quot;(ISC OR GPL-3.0)&quot;</span><br/><span class="hl-1">}</span>
-</code></pre>
-<p>If you are using a license that hasn&#39;t been assigned an SPDX identifier, or if you are using a custom license, use a string value like this one:</p>
-<pre><code><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-3">&quot;license&quot;</span><span class="hl-1"> : </span><span class="hl-3">&quot;SEE LICENSE IN `&lt;filename&gt;`&quot;</span><br/><span class="hl-1">}</span>
-</code></pre>
-<p>Then include a file named <code>&lt;filename&gt;</code> at the top level of the package.</p>
-<p>Some old packages used license objects or a &quot;licenses&quot; property containing an array of license objects:</p>
-<pre><code><span class="hl-7">// Not valid metadata</span><br/><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-3">&quot;license&quot;</span><span class="hl-1"> : {</span><br/><span class="hl-1">    </span><span class="hl-3">&quot;type&quot;</span><span class="hl-2"> :</span><span class="hl-1"> </span><span class="hl-3">&quot;ISC&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-3">&quot;url&quot;</span><span class="hl-2"> :</span><span class="hl-1"> </span><span class="hl-3">&quot;https://opensource.org/licenses/ISC&quot;</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span><br/><br/><span class="hl-7">// Not valid metadata</span><br/><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-3">&quot;licenses&quot;</span><span class="hl-1"> : [</span><br/><span class="hl-1">    {</span><br/><span class="hl-1">      </span><span class="hl-3">&quot;type&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;MIT&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-3">&quot;url&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;https://www.opensource.org/licenses/mit-license.php&quot;</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">    {</span><br/><span class="hl-1">      </span><span class="hl-3">&quot;type&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;Apache-2.0&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-3">&quot;url&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;https://opensource.org/licenses/apache2.0.php&quot;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">  ]</span><br/><span class="hl-1">}</span>
-</code></pre>
-<p>Those styles are now deprecated. Instead, use SPDX expressions, like this:</p>
-<pre><code><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-3">&quot;license&quot;</span><span class="hl-1">: </span><span class="hl-3">&quot;ISC&quot;</span><br/><span class="hl-1">}</span><br/><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-3">&quot;license&quot;</span><span class="hl-1">: </span><span class="hl-3">&quot;(MIT OR Apache-2.0)&quot;</span><br/><span class="hl-1">}</span>
-</code></pre>
-<p>Finally, if you do not wish to grant others the right to use a private or unpublished package under any terms:</p>
-<pre><code><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-3">&quot;license&quot;</span><span class="hl-1">: </span><span class="hl-3">&quot;UNLICENSED&quot;</span><br/><span class="hl-1">}</span>
-</code></pre>
-<p>Consider also setting &quot;private&quot;: true to prevent accidental publication.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#license">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#license</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L131">PackageJson.ts:131</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L40">PackageJson.ts:40</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="main" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>main</span><a href="#main" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">main</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>The main field is a module ID that is the primary entry point to your program.
-That is, if your package is named foo, and a user installs it, and then does require(&quot;foo&quot;),
-then your main module&#39;s exports object will be returned.</p>
-<p>This should be a module relative to the root of your package folder.</p>
-<p>For most modules, it makes the most sense to have a main script and often not much else.</p>
-<p>If main is not set it defaults to index.js in the package&#39;s root folder.</p>
+<div class="tsd-comment tsd-typography"><p>The main field is a module ID that is the primary entry point to your program.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#main">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#main</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L201">PackageJson.ts:201</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L66">PackageJson.ts:66</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="man" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>man</span><a href="#man" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">man</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>Specify either a single file or an array of filenames to put in place for the man program to find.</p>
-<p>If only a single file is provided, then it&#39;s installed such that it is the result from man <code>&lt;pkgname&gt;</code>, regardless of its actual filename.</p>
-<p>Man files must end with a number, and optionally a .gz suffix if they are compressed.
-The number dictates which man section the file is installed into.</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-3">&quot;./man/doc.1&quot;</span>
-</code></pre>
-
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">[</span><span class="hl-3">&quot;./man/foo.1&quot;</span><span class="hl-1">,</span><span class="hl-3">&quot;./man/bar.1&quot;</span><span class="hl-1">]</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#man">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#man</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L238">PackageJson.ts:238</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L83">PackageJson.ts:83</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>If you plan to publish your package, the most important things in your package.json
-are the name and version fields as they will be required.
-The name and version together form an identifier that is assumed to be completely unique.
-Changes to the package should come along with changes to the version.
-If you don&#39;t plan to publish your package, the name and version fields are optional.
-The name is what your thing is called.</p>
-<p>Some rules:</p>
-<ul>
-<li>The name must be less than or equal to 214 characters. This includes the scope for scoped packages.</li>
-<li>The names of scoped packages can begin with a dot or an underscore. This is not permitted without a scope.</li>
-<li>New packages must not have uppercase letters in the name.</li>
-<li>The name ends up being part of a URL, an argument on the command line, and a folder name. Therefore, the name can&#39;t contain any non-URL-safe characters.</li>
-</ul>
-<p>Some tips:</p>
-<ul>
-<li>Don&#39;t use the same name as a core Node module.</li>
-<li>Don&#39;t put &quot;js&quot; or &quot;node&quot; in the name. It&#39;s assumed that it&#39;s js, since you&#39;re writing a package.json file, and you can specify the engine using the &quot;engines&quot; field. (See below.)</li>
-<li>The name will probably be passed as an argument to require(), so it should be something short, but also reasonably descriptive.</li>
-<li>You may want to check the npm registry to see if there&#39;s something by that name already, before you get too attached to it. <a href="https://www.npmjs.com/">https://www.npmjs.com/</a></li>
-</ul>
-<p>A name can be optionally prefixed by a scope, e.g. @myorg/mypackage. See scope for more detail.</p>
+<div class="tsd-comment tsd-typography"><p>The package name.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L30">PackageJson.ts:30</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L10">PackageJson.ts:10</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="optionalDependencies" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>optional<wbr/>Dependencies</span><a href="#optionalDependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">optional<wbr/>Dependencies</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>If a dependency can be used, but you would like npm to proceed if it cannot be found or fails to install,
-then you may put it in the optionalDependencies object.
-This is a map of package name to version or url, just like the dependencies object.
-The difference is that build failures do not cause installation to fail.
-Running npm install --omit=optional will prevent these dependencies from being installed.</p>
-<p>It is still your program&#39;s responsibility to handle the lack of the dependency.</p>
-<p>Entries in optionalDependencies will override entries of the same name in dependencies, so it&#39;s usually best to only put in one place.</p>
+then you may put it in the optionalDependencies object.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#optionaldependencies">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#optionaldependencies</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L383">PackageJson.ts:383</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L141">PackageJson.ts:141</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="os" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>os</span><a href="#os" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">os</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
-<div class="tsd-comment tsd-typography"><p>You can specify which operating systems your module will run on.
-You can also block instead of allowing operating systems, just prepend the blocked os with a &#39;!&#39;
-The host operating system is determined by process.platform</p>
-<p>It is allowed to both block and allow an item, although there isn&#39;t any good reason to do this.</p>
+<div class="tsd-comment tsd-typography"><p>You can specify which operating systems your module will run on.</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;os&quot;</span><span class="hl-1">: [</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;darwin&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;linux&quot;</span><br/><span class="hl-1">         ]</span><br/><span class="hl-1">       }</span>
-</code></pre>
-
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;os&quot;</span><span class="hl-1">: [</span><br/><span class="hl-1">           </span><span class="hl-3">&quot;!win32&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">         ]</span><br/><span class="hl-1">       }</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#os">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#os</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L437">PackageJson.ts:437</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L160">PackageJson.ts:160</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="overrides" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>overrides</span><a href="#overrides" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">overrides</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -426,105 +289,88 @@ The host operating system is determined by process.platform</p>
 for example replacing the version of a dependency with a known security issue,
 replacing an existing dependency with a fork, or making sure that the same version of a package is used everywhere,
 then you may add an override.</p>
-<p>Overrides provide a way to replace a package in your dependency tree with another version, or another package entirely.
-These changes can be scoped as specific or as vague as desired.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L393">PackageJson.ts:393</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L149">PackageJson.ts:149</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="peerDependencies" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>peer<wbr/>Dependencies</span><a href="#peerDependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">peer<wbr/>Dependencies</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>In some cases, you want to express the compatibility of your package with a host tool or library,
-while not necessarily doing a require of this host. This is usually referred to as a plugin.
-Notably, your module may be exposing a specific interface, expected and specified by the host documentation.</p>
-<p>In npm versions 3 through 6, peerDependencies were not automatically installed,
-and would raise a warning if an invalid version of the peer dependency was found in the tree.
-As of npm v7, peerDependencies are installed by default.</p>
-<p>Trying to install another plugin with a conflicting requirement may cause an error if the tree cannot be resolved correctly.
-For this reason,   make sure your plugin requirement is as broad as possible, and not to lock it down to specific patch versions.</p>
-<p>Assuming the host complies with semver, only changes in the host package&#39;s major version will break your plugin.
-Thus, if you&#39;ve worked with every 1.x version of the host package, use &quot;^1.0&quot; or &quot;1.x&quot; to express this.
-If you depend on features introduced in 1.5.2, use &quot;^1.5.2&quot;.</p>
+while not necessarily doing a require of this host. This is usually referred to as a plugin.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#peerdependencies">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#peerdependencies</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L347">PackageJson.ts:347</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L125">PackageJson.ts:125</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="peerDependenciesMeta" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>peer<wbr/>Dependencies<wbr/>Meta</span><a href="#peerDependenciesMeta" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">peer<wbr/>Dependencies<wbr/>Meta</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="PeerDependencyMeta.html" class="tsd-signature-type tsd-kind-interface">PeerDependencyMeta</a><span class="tsd-signature-symbol">&gt;</span></div>
-<div class="tsd-comment tsd-typography"><p>When a user installs your package, npm will emit warnings if packages specified in peerDependencies are not already installed.
-The peerDependenciesMeta field serves to provide npm more information on how your peer dependencies are to be used.
-Specifically, it allows peer dependencies to be marked as optional.</p>
+<div class="tsd-comment tsd-typography"><p>When a user installs your package, npm will emit warnings if packages specified in peerDependencies are not already installed.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#peerdependenciesmeta">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#peerdependenciesmeta</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L353">PackageJson.ts:353</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L130">PackageJson.ts:130</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="private" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>private</span><a href="#private" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">private</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>If you set &quot;private&quot;: true in your package.json, then npm will refuse to publish it.</p>
-<p>This is a way to prevent accidental publication of private repositories.
-If you would like to ensure that a given package is only ever published to a specific registry
-(for example, an internal registry), then use the publishConfig dictionary described below
-to override the registry config param at publish-time.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#private">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#private</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L468">PackageJson.ts:468</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L170">PackageJson.ts:170</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="publishConfig" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>publish<wbr/>Config</span><a href="#publishConfig" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">publish<wbr/>Config</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
-<div class="tsd-comment tsd-typography"><p>This is a set of config values that will be used at publish-time.
-It&#39;s especially handy if you want to set the tag, registry or access,
-so that you can ensure that a given package is not tagged with &quot;latest&quot;,
-published to the global public registry or that a scoped module is private by default.</p>
-<p>See config to see the list of config options that can be overridden.</p>
+<div class="tsd-comment tsd-typography"><p>This is a set of config values that will be used at publish-time.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#publishconfig">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#publishconfig</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L477">PackageJson.ts:477</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L175">PackageJson.ts:175</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="repository" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>repository</span><a href="#repository" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">repository</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="Repository.html" class="tsd-signature-type tsd-kind-interface">Repository</a></div>
 <div class="tsd-comment tsd-typography"><p>Specify the place where your code lives. This is helpful for people who want to contribute.
 If the git repo is on GitHub, then the npm docs command will be able to find you.</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">        </span><span class="hl-3">&quot;repository&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">          </span><span class="hl-3">&quot;type&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;git&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">          </span><span class="hl-3">&quot;url&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;https://github.com/facebook/react.git&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">          </span><span class="hl-3">&quot;directory&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-3">&quot;packages/react-dom&quot;</span><br/><span class="hl-1">        }</span><br/><span class="hl-1">      }</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#repository">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#repository</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L261">PackageJson.ts:261</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L94">PackageJson.ts:94</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="scripts" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>scripts</span><a href="#scripts" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">scripts</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>Script commands that are run at various times in the lifecycle of your package.
 The key is the lifecycle event, and the value is the command to run at that point.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#scripts">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#scripts</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L267">PackageJson.ts:267</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L101">PackageJson.ts:101</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="version" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>version</span><a href="#version" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">version</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>If you plan to publish your package, the most important things in your package.json are the name and version fields as they will be required.
-The name and version together form an identifier that is assumed to be completely unique.
-Changes to the package should come along with changes to the version.
-If you don&#39;t plan to publish your package, the name and version fields are optional.</p>
-<p>Version must be parseable by node-semver, which is bundled with npm as a dependency. (npm install semver to use it yourself.)</p>
+<div class="tsd-comment tsd-typography"><p>The package version.</p>
+
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#version">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#version</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L39">PackageJson.ts:39</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L15">PackageJson.ts:15</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="workspaces" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>workspaces</span><a href="#workspaces" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">workspaces</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>The optional workspaces field is an array of file patterns that describes locations
 within the local file system that the install client should look up to find each workspace
 that needs to be symlinked to the top level node_modules folder.</p>
-<p>It can describe either the direct paths of the folders to be used as workspaces
-or it can define globs that will resolve to these same folders.</p>
-<p>In the following example, all folders located inside the folder ./packages will be treated
-as workspaces as long as they have valid package.json files inside them.</p>
 
-<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">{</span><br/><span class="hl-1">       </span><span class="hl-3">&quot;name&quot;</span><span class="hl-1">: </span><span class="hl-3">&quot;workspace-example&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">       </span><span class="hl-3">&quot;workspaces&quot;</span><span class="hl-1">: [</span><br/><span class="hl-1">         </span><span class="hl-3">&quot;./packages/*&quot;</span><br/><span class="hl-1">       ]</span><br/><span class="hl-1">     }</span>
-</code></pre>
+<h3>See</h3><p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#workspaces">https://docs.npmjs.com/cli/v9/configuring-npm/package-json#workspaces</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/a4195c6/src/PackageJson.ts#L498">PackageJson.ts:498</a></li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/vivienld/pakaje/blob/db3142f/src/PackageJson.ts#L182">PackageJson.ts:182</a></li></ul></aside></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
